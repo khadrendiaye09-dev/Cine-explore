@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CinéExplore : une petite application de découverte de films.">
+  <title>CinéExplore — Découvre ton prochain film</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="CinéExplore, accueil"><span class="brand-mark">C</span> Ciné<span>Explore</span></a>
+    <span class="header-note">Ton prochain film commence ici</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">TON CINÉMA, À PORTÉE DE CLIC</p>
+      <h1>Chaque histoire<br><span>ouvre un monde.</span></h1>
+      <p class="hero-copy">Explore des films, trouve une nouvelle pépite et choisis ta prochaine soirée cinéma.</p>
+      <div class="search-panel">
+        <label class="sr-only" for="searchInput">Rechercher un film par titre</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Rechercher un film..." autocomplete="off">
+        <label class="sr-only" for="genreFilter">Filtrer par genre</label>
+        <select id="genreFilter">
+          <option value="all">Tous les genres</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="catalog" aria-labelledby="catalogTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">LA SÉLECTION</p>
+          <h2 id="catalogTitle">À découvrir</h2>
+        </div>
+        <p id="resultCount" class="result-count" aria-live="polite"></p>
+      </div>
+      <div id="movieGrid" class="movie-grid"></div>
+      <p id="emptyMessage" class="empty-message" hidden>Aucun film ne correspond à ta recherche. Essaie un autre titre ou un autre genre.</p>
+      <p class="demo-note">Sélection de démonstration créée pour le projet scolaire CinéExplore.</p>
+    </section>
+  </main>
+
+  <dialog id="movieDialog" class="movie-dialog" aria-labelledby="dialogTitle">
+    <button id="closeDialog" class="dialog-close" type="button" aria-label="Fermer les détails">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <footer class="site-footer"><span>© 2026 CinéExplore</span><span>Fait pour les amoureux du cinéma 🍿</span></footer>
+</body>
+</html>
